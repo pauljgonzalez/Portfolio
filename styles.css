@@ -39,45 +39,10 @@ body{
    color: #000000;
    position: relative;
    top: 5px; 
-   right: 800px;
    height: 15%;
-   width: var(--animation-width);
    letter-spacing: 3px;
-   overflow: hidden;
-   animation: moveLeft  var(--animation-duration) linear infinite; 
-   white-space: pre;
-}
-@keyframes moveLeft {
-    0% {
-        transform: translate3d(0, 0, 0);
-    }
-    100% {
-        transform: translate3d(100%, 0, 0);
-    }
-}
-@media (max-width: 3000px) {
-    :root {
-      --animation-duration: 30s;
-      --animation-width: 180%;
-    }
-}
-@media (max-width: 1200px) {
-    :root {
-      --animation-duration: 15s;
-      --animation-width: 220%;
-    }
-}
-@media (max-width: 1200px) {
-    :root {
-      --animation-duration: 15s;
-      --animation-width: 250%;
-    }
-}
-@media (max-width: 800px) {
-    :root {
-      --animation-duration: 40s;
-      --animation-width: 300vw;
-    }
+   text-align: center;
+   color: #8B008B;
 }
 .header__content{
     display: flex;
