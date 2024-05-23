@@ -52,7 +52,7 @@ body{
         transform: translateX(0);
     }
     100% {
-        transform: translateX(100%); /* Adjust the distance based on the width of the element */
+        transform: translateX(100%); 
     }
 }
 @media (max-width: 3000px) {
@@ -81,7 +81,7 @@ body{
 }
 @media (max-width: 600px) {
     :root {
-      --animation-duration: 12s;
+      --animation-duration: 20s;
       --animation-width: 300vw;
     }
 }
