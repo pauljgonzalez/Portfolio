@@ -75,13 +75,7 @@ body{
 }
 @media (max-width: 800px) {
     :root {
-      --animation-duration: 20s;
-      --animation-width: 300vw;
-    }
-}
-@media (max-width: 600px) {
-    :root {
-      --animation-duration: 20s;
+      --animation-duration: 40s;
       --animation-width: 300vw;
     }
 }
