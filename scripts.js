@@ -1,5 +1,9 @@
 const typeWritterEffectLocation = document.querySelector(".about-me__span");
 const projectsList = document.querySelector(".projects__list");
+window.onload = function() {
+    // Reset the form fields when the page loads
+    document.querySelector(".contact-form").reset();
+}
 //array for type writer effect
 const typeArray = [
     "Frontend Developer",
@@ -102,3 +106,20 @@ projectsList.addEventListener('contextmenu', (e) => {
     const step = 1;
     projectsList.scrollLeft += delta * step;
   });
+
+  
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    
+    var formData = new FormData(this);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://api.web3forms.com/submit", true);
+    
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            window.location.href = "success.html"; // Redirect to the success page
+        }
+    };
+    
+    xhr.send(formData);
+});
