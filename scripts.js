@@ -1,4 +1,5 @@
 const typeWritterEffectLocation = document.querySelector(".about-me__span");
+const projectsList = document.querySelector(".projects__list");
 //array for type writer effect
 const typeArray = [
     "Frontend Developer",
@@ -49,4 +50,55 @@ function startTypingEffectWhenInView(element) {
     }, { threshold: 1.0 });
     observer.observe(element);
 }
-setTimeout(() => startTypingEffectWhenInView(typeWritterEffectLocation), 2000);
+// setTimeout(() => startTypingEffectWhenInView(typeWritterEffectLocation), 2000);
+projectsList.onmousedown = function() {return false;}
+
+//with help from chat gpt
+let isMouseDown = false;
+let startX;
+let scrollLeft;
+
+projectsList.addEventListener('mousedown', (e) => {
+    projectsList.style.cursor = "grabbing";
+  isMouseDown = true;
+  startX = e.pageX - projectsList.offsetLeft;
+  scrollLeft = projectsList.scrollLeft;
+});
+
+projectsList.addEventListener('mouseleave', () => {
+  isMouseDown = false;
+  projectsList.style.cursor = "grab";
+});
+
+projectsList.addEventListener('mouseup', () => {
+  isMouseDown = false;
+  projectsList.style.cursor = "grab";
+});
+
+projectsList.addEventListener('mousemove', (e) => {
+  if (!isMouseDown) return;
+  projectsList.style.cursor = "grabbing";
+  e.preventDefault();
+  const x = e.pageX - projectsList.offsetLeft;
+  const walk = (x - startX) * 2;
+  projectsList.scrollLeft = scrollLeft - walk;
+});
+
+projectsList.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  const delta = Math.sign(e.deltaY);
+  const step = 100; 
+  projectsList.scrollLeft += delta * step;
+});
+
+
+projectsList.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+  });
+
+  projectsList.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    const delta = Math.sign(e.deltaY);
+    const step = 1;
+    projectsList.scrollLeft += delta * step;
+  });
