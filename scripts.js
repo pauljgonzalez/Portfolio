@@ -108,18 +108,3 @@ projectsList.addEventListener('contextmenu', (e) => {
   });
 
   
-  document.getElementById(".contactForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the form from submitting normally
-    
-    var formData = new FormData(this);
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://api.web3forms.com/submit", true);
-    
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            window.location.href = "success.html"; // Redirect to the success page
-        }
-    };
-    
-    xhr.send(formData);
-});

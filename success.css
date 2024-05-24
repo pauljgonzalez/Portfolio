@@ -1,16 +1,17 @@
 body{
     margin: 0;
+
 }
 .success__container{
     display: flex;
     background-color: #80FFFF;
     flex-direction: column;
     gap: 32px;
-    height: 100vh;
     align-items: center;
     justify-content: center;
     overflow-y: hidden;
     overflow-x: hidden;
+    height: 100vh;
 }
 .success__text{
     font-size: clamp(28px,5vw,64px);
@@ -19,7 +20,7 @@ body{
     animation: pulsate 0.11s ease-in-out infinite alternate; 
 }
 .success__svg{
-    height: clamp(300px,50vw,600px);
+    height: clamp(300px,40vw,400px);
     animation: slideInFromRight 1s ease-in;
 }
 .animate{
