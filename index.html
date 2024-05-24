@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paul Gonzalez Frontend Dev</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="scripts.js"></script>
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <div class="page">
@@ -205,7 +205,7 @@
         </div>
         <div class="page__content">
             <div class="card card--blue content__about-me">
-                <div class="about-me__header">Hi I am Paul Gonzalez a <span class="about-me__span">Frontend Developer</span></div>
+                <div class="about-me__header"><span class="about-me__span--first" >Hi I'm Paul Gonzalez a </span><span class="about-me__span">Frontend Developer</span></div>
                 <div class="about-me__info">
                         <div class=info__list>
                             <div class="info info--large">Some information about me</div>
@@ -228,9 +228,11 @@
         <div class="page__content">
             <div class="card card--blue content__contact">
                 <div class="contact_resume">
-                    <button class ="button-49">
-                        <a href="Resume.pdf" class="resume" target="_blank">Resume</a>
+                    <a href="Resume.pdf" class="resume" target="_blank">
+                    <button class ="button-49" >
+                        Resume
                     </button>
+                </a>
                 </div>
                 <div class="contact__form">
                     <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
@@ -265,3 +267,4 @@
 </body>
 </html>
 <!-- have to make a success page on submit  then just change that to redirect value-->
+<!-- and have to make javascript for scrolling to hit next section and for Hi im paul gonzalez A to look like typing new words -->

@@ -11,6 +11,9 @@ body{
 }
 .page{
     background-color:  #000000;
+    display: flex;
+    flex-direction: column;
+    gap: 40vw;
 
 }
 .page__content{
@@ -229,8 +232,23 @@ body{
     display: flex;
     flex-wrap: wrap;
     white-space: pre;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    flex: content;
+}
+.about-me__span{
+  min-height: 50px;
+  min-width: 50px;
+  max-width: 150px;
+
+}
+.about-me__span--first{
+
+}
+@media screen and (max-width: 1100px) {
+  .about-me__header{
+    flex-direction: column;
+  }
 }
 .info__list{
     display: flex;
@@ -257,10 +275,6 @@ body{
     gap: 20%;
     height: auto;
 }
-.contact_resume{
-
-}
-
   .form-group-container {
     display: grid;
     gap: 1rem;
@@ -324,6 +338,9 @@ body{
     color: #00FFFF;
     text-decoration: none;
   }
+  .resume{
+    width: 200%;
+  }
 
 .button-49,
 .button-49:after {
@@ -342,6 +359,7 @@ body{
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  cursor: pointer;
 }
 
 .button-49:after {
