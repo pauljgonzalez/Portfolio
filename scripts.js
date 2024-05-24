@@ -108,7 +108,7 @@ projectsList.addEventListener('contextmenu', (e) => {
   });
 
   
-  document.getElementById("contactForm").addEventListener("submit", function(event) {
+  document.getElementById(".contactForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent the form from submitting normally
     
     var formData = new FormData(this);
